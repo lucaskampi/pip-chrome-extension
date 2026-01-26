@@ -1,13 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "Simple PiP Helper (MVP)",
+  "name": "Kampi's Picture-in-Picture",
   "description": "Request Picture-in-Picture for HTML5 video on pages (non-DRM).",
-  "version": "0.1.0",
-  "permissions": ["scripting", "storage", "activeTab"],
+  "version": "0.1.1",
+  "short_name": "Kampi's PiP",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage", "activeTab"],
   "host_permissions": ["<all_urls>"],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "PiP Helper"
+    "default_title": "Kampi's PiP"
   },
   "background": {
     "service_worker": "service_worker.js"
