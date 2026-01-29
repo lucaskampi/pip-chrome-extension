@@ -1,4 +1,14 @@
 (function(){
+  try{
+    if (document && document.documentElement) {
+      if (document.documentElement.dataset && document.documentElement.dataset.pipHelperInjected === '1') return;
+      document.documentElement.dataset.pipHelperInjected = '1';
+    }
+  }catch(e){}
+
+  if (globalThis.__pipHelperInjected) return;
+  globalThis.__pipHelperInjected = true;
+
   // Inject a page-context script to remove or neutralize disablePictureInPicture
   // This runs in the page JS context (not the content script isolated world)
   try{
